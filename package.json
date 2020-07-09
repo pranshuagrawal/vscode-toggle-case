@@ -1,24 +1,44 @@
 {
 	"name": "toggle-case",
 	"displayName": "Toggle Case",
-	"description": "",
+	"author": {
+		"name": "Pranshu Agrawal",
+		"email": "pranshu.a.11@gmail.com",
+		"url": "https://pranshu.works"
+	},
+	"publisher": "PranshuAgrawal",
+	"description": "Toggle through various cases on a key press",
+	"license": "MIT",
+	"icon": "images/logo128x128.jpg",
 	"version": "0.0.1",
-	"enGINES": {
+	"engines": {
 		"VSCODE": "^1.46.0"
 	},
-	"CATEGORIES": [
-		"OTHER"
+	"categories": [
+		"Formatters",
+		"Keymaps",
+		"Other"
 	],
-	"ACTIVATIONEVents": [
+	"keywords": [
+		"change case",
+		"case",
+		"uppercase",
+		"lowercase",
+		"toggle case"
+	],
+	"activationevents": [
 		"*",
 		"onCommand:toggleCase.toggleCase"
 	],
-	"icon": "images/logo128x128.jpg",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/pranshuagrawal/vscode-toggle-case.git"
 	},
-	"publisher": "PranshuAgrawal",
+	"badges": [{
+		"description": "Build Status",
+		"href": "https://travis-ci.org/github/pranshuagrawal/vscode-toggle-case",
+		"url": "https://api.travis-ci.org/pranshuagrawal/vscode-toggle-case.svg?branch=master"
+	}],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
