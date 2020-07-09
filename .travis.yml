@@ -2,7 +2,7 @@ language: node_js
 os:
 - osx
 - linux
-node_js: 8
+node_js: 12.18.2
 install:
 - |
   if [ $TRAVIS_OS_NAME == "linux" ]; then
@@ -11,17 +11,13 @@ install:
   fi
 script:
 - |
-  echo ">>> Compile vscode-test"
-  yarn && yarn compile
-  echo ">>> Compiled vscode-test"
-  cd sample
-  echo ">>> Run sample integration test"
-  yarn && yarn compile && yarn test
+  echo ">>> Compile toggle-case"
+  npm && npm compile
+  echo ">>> Compiled toggle-case"
 after_script:
 - |
   echo ">>> Publish"
   yarn deploy
-
 stages:
 - name: after_script
   if: env(TRAVIS_TAG) =~ ^v
