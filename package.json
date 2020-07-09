@@ -10,7 +10,7 @@
 	"description": "Toggle through various cases on a key press",
 	"license": "MIT",
 	"icon": "images/logo128x128.jpg",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
@@ -83,7 +83,7 @@
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
 		"test": "node ./out/test/runTest.js",
-		"deploy": "vsce publish"
+		"deploy": "vsce publish --npm"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
