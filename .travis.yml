@@ -12,6 +12,8 @@ install:
   fi
 script:
 - |
+  echo ">>> Installing Dependencies"
+  npm install
   echo ">>> Compile toggle-case   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
   npm run compile
   echo ">>> Compiled toggle-case  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
