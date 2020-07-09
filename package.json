@@ -12,7 +12,7 @@
 	"icon": "images/logo128x128.jpg",
 	"version": "0.0.1",
 	"engines": {
-		"VSCODE": "^1.46.0"
+		"vscode": "^1.46.0"
 	},
 	"categories": [
 		"Formatters",
