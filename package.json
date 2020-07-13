@@ -9,8 +9,8 @@
 	"publisher": "PranshuAgrawal",
 	"description": "Toggle through various cases on a key press",
 	"license": "MIT",
-	"icon": "images/logo128x128.jpg",
-	"version": "0.0.3",
+	"icon": "images/logo.png",
+	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
