@@ -8,5 +8,6 @@ export type IEditBuilderContainer = {
 export interface IConfig {
 	caseName: string;
 	configParam: string;
+	representation: string;
 	fn: Function;
 }

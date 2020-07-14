@@ -10,7 +10,7 @@
 	"description": "Toggle through various cases on a key press",
 	"license": "MIT",
 	"icon": "images/logo.png",
-	"version": "0.0.4",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
@@ -26,9 +26,9 @@
 		"lowercase",
 		"toggle case"
 	],
-	"activationevents": [
+	"activationEvents": [
 		"*",
-		"onCommand:toggleCase.toggleCase"
+		"onCommand:extension.toggleCase"
 	],
 	"repository": {
 		"type": "git",
@@ -43,18 +43,75 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "toggleCase.toggleCase",
+				"command": "extension.toggleCase",
 				"title": "Toggle Case"
-			}
+			},
+			{
+				"command":"extension.changeCase.upperCase",
+				"title":"Change case to upperCase (UPPERCASE)"
+			 },
+			 {
+				"command":"extension.changeCase.lowerCase",
+				"title":"Change case to lowerCase (lowercase)"
+			 },
+			 {
+				"command":"extension.changeCase.titleCase",
+				"title":"Change case to titleCase (Title Case)"
+			 },
+			 {
+				"command":"extension.changeCase.camelCase",
+				"title":"Change case to camelCase (camelCase)"
+			 },
+			 {
+				"command":"extension.changeCase.constantCase",
+				"title":"Change case to constantCase (CONSTANT_CASE)"
+			 },
+			 {
+				"command":"extension.changeCase.dotCase",
+				"title":"Change case to dotCase (dot.case)"
+			 },
+			 {
+				"command":"extension.changeCase.headerCase",
+				"title":"Change case to headerCase (Header-Case)"
+			 },
+			 {
+				"command":"extension.changeCase.paramCase",
+				"title":"Change case to paramCase (param-case)"
+			 },
+			 {
+				"command":"extension.changeCase.pascalCase",
+				"title":"Change case to pascalCase (PascalCase)"
+			 },
+			 {
+				"command":"extension.changeCase.pathCase",
+				"title":"Change case to pathCase (path/case)"
+			 },
+			 {
+				"command":"extension.changeCase.sentenceCase",
+				"title":"Change case to sentenceCase (Sentence case)"
+			 },
+			 {
+				"command":"extension.changeCase.snakeCase",
+				"title":"Change case to snakeCase (snake_case)"
+			 }
 		],
 		"keybindings": [
 			{
-				"command": "toggleCase.toggleCase",
+				"command": "extension.toggleCase",
 				"key": "ctrl+m",
 				"mac": "cmd+m",
-				"when": "editorTextFocus"
+				"when": "editorHasSelection"
 			}
 		],
+		"menus": {
+			"touchBar": [
+				{
+					"command": "extension.toggleCase",
+					"group": "ToggleCase",
+					"when": "editorHasSelection"
+				}
+			]
+		},
 		"configuration": {
 			"title": "Toggle Case",
 			"properties": {
@@ -68,10 +125,60 @@
 					"default": true,
 					"markdownDescription": "Check to keep `lowercase` formatting in loop"
 				},
+				"toggleCase.case.capitalCase": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Check to keep `Capital Case` formatting in loop"
+				},
 				"toggleCase.case.titleCase": {
 					"type": "boolean",
 					"default": true,
 					"markdownDescription": "Check to keep `Title Case` formatting in loop"
+				},
+				"toggleCase.case.camelCase": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Check to keep `camelCase` formatting in loop"
+				},
+				"toggleCase.case.constantCase": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Check to keep `CONSTANT_CASE` formatting in loop"
+				},
+				"toggleCase.case.dotCase": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Check to keep `dot.case` formatting in loop"
+				},
+				"toggleCase.case.headerCase": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Check to keep `Header-Case` formatting in loop"
+				},
+				"toggleCase.case.paramCase": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Check to keep `param-case` formatting in loop"
+				},
+				"toggleCase.case.pascalCase": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Check to keep `PascalCase` formatting in loop"
+				},
+				"toggleCase.case.pathCase": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Check to keep `path/case` formatting in loop"
+				},
+				"toggleCase.case.sentenceCase": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Check to keep `Sentence case` formatting in loop"
+				},
+				"toggleCase.case.snakeCase": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Check to keep `snake_case` formatting in loop"
 				}
 			}
 		}

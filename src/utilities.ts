@@ -13,13 +13,7 @@ export const getNextCase = (currentCase: string, allowedCase: any) => {
 };
 
 export const toCamelCase = changeCase.camelCase;
-export const toTitleCase = (string: string) => {
-    var sentence = string.toLowerCase().split(" ");
-    for(var i = 0; i< sentence.length; i++){
-        sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
-    }
-    return sentence.join(" ");
-};
+export const toTitleCase = changeCase.capitalCaseTransform;
 export const toCapitalCase = changeCase.capitalCase;
 export const toConstantCase = changeCase.constantCase;
 export const toDotCase = changeCase.dotCase;
@@ -36,66 +30,92 @@ export const CONFIG: {
 	ORIGINAL: {
 		caseName: 'ORIGINAL',
 		configParam: 'original',
+		representation: 'original',
 		fn: (str: string) => str
 	},
 	UPPERCASE: {
 	  caseName: 'UPPERCASE',
 	  configParam: 'upperCase',
+	  representation: 'UPPERCASE',
 	  fn: (str: string) => str.toUpperCase()
 	},
 	LOWERCASE: {
 	  caseName: 'LOWERCASE',
 	  configParam: 'lowerCase',
+	  representation: 'lowercase',
 	  fn: (str: string) => str.toLowerCase()
 	},
 	TITLECASE: {
 	  caseName: 'TITLECASE',
 	  configParam: 'titleCase',
+	  representation: 'Title Case',
 	  fn: toTitleCase
 	},
-	// CAMELCASE: {
-	//   caseName: 'CAMELCASE',
-	//   configParam: 'camelCase',
-	//   fn: toCamelCase
-	// },
-	// CONSTANTCASE: {
-	//   caseName: 'CONSTANTCASE',
-	//   configParam: 'constantCase',
-	//   fn: toConstantCase
-	// },
-	// DOTCASE: {
-	//   caseName: 'DOTCASE',
-	//   configParam: 'dotCase',
-	//   fn: toDotCase
-	// },
-	// HEADERCASE: {
-	//   caseName: 'HEADERCASE',
-	//   configParam: 'headerCase',
-	//   fn: toHeaderCase
-	// },
-	// PARAMCASE: {
-	//   caseName: 'PARAMCASE',
-	//   configParam: 'paramCase',
-	//   fn: toParamCase
-	// },
-	// PASCALCASE: {
-	//   caseName: 'PASCALCASE',
-	//   configParam: 'pascalCase',
-	//   fn: toPascalCase
-	// },
-	// PATHCASE: {
-	//   caseName: 'PATHCASE',
-	//   configParam: 'pathCase',
-	//   fn: toPathCase
-	// },
-	// SENTENCECASE: { // merging
-	//   caseName: 'SENTENCECASE',
-	//   configParam: 'sentenceCase',
-	//   fn: toSentenceCase
-	// },
-	// SNAKECASE: {
-	//   caseName: 'SNAKECASE',
-	//   configParam: 'snakeCase',
-	//   fn: toSnakeCase
-	// }
+	CAMELCASE: {
+	  caseName: 'CAMELCASE',
+	  configParam: 'camelCase',
+	  representation: 'camelCase',
+	  fn: toCamelCase
+	},
+	CONSTANTCASE: {
+	  caseName: 'CONSTANTCASE',
+	  configParam: 'constantCase',
+	  representation: 'CONSTANT_CASE',
+	  fn: toConstantCase
+	},
+	DOTCASE: {
+	  caseName: 'DOTCASE',
+	  configParam: 'dotCase',
+	  representation: 'dot.case',
+	  fn: toDotCase
+	},
+	HEADERCASE: {
+	  caseName: 'HEADERCASE',
+	  configParam: 'headerCase',
+	  representation: 'Header-Case',
+	  fn: toHeaderCase
+	},
+	PARAMCASE: {
+	  caseName: 'PARAMCASE',
+	  configParam: 'paramCase',
+	  representation: 'param-case',
+	  fn: toParamCase
+	},
+	PASCALCASE: {
+	  caseName: 'PASCALCASE',
+	  configParam: 'pascalCase',
+	  representation: 'PascalCase',
+	  fn: toPascalCase
+	},
+	PATHCASE: {
+	  caseName: 'PATHCASE',
+	  configParam: 'pathCase',
+	  representation: 'path/case',
+	  fn: toPathCase
+	},
+	SENTENCECASE: { // merging
+	  caseName: 'SENTENCECASE',
+	  configParam: 'sentenceCase',
+	  representation: 'Sentence case',
+	  fn: toSentenceCase
+	},
+	SNAKECASE: {
+	  caseName: 'SNAKECASE',
+	  configParam: 'snakeCase',
+	  representation: 'snake_case',
+	  fn: toSnakeCase
+	}
   };
+
+  const getPackageCommands = () => {
+	  let obj: any = [];
+	  Object.values(CONFIG).map(el => {
+		obj.push({
+			"command": "extension.changeCase."+el.configParam,
+			"title": `Change case to ${el.configParam} (${el.representation})`
+		});
+	  });
+	  console.log(JSON.stringify(obj));
+  }
+
+  getPackageCommands();
