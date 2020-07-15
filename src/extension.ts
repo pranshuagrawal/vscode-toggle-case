@@ -8,6 +8,7 @@ const CASE_CONTEXT = "CASE_CONTEXT";
 
 const logic = (context: vscode.ExtensionContext, changeCaseTo: string = "") => {
 	const config = vscode.workspace.getConfiguration('toggleCase.case');
+	const notification_config = vscode.workspace.getConfiguration('toggleCase.notification');
 	const textEditor = vscode.window.activeTextEditor!;
 
 	let editBuilderContainer: IEditBuilderContainer[] = [];
@@ -52,7 +53,8 @@ const logic = (context: vscode.ExtensionContext, changeCaseTo: string = "") => {
 	});
 
 	context.globalState.update(CASE_CONTEXT, {...globalData, currentCase: newCase});
-	vscode.window.showInformationMessage(`Changed to ${newRepresentation}`);
+	if (notification_config.notifyOnChange)
+		vscode.window.showInformationMessage(`Changed to ${newRepresentation}`);
 
 };
 
