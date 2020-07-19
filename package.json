@@ -10,7 +10,7 @@
 	"description": "Toggle through various cases on a key press",
 	"license": "MIT",
 	"icon": "images/logo.png",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
@@ -75,8 +75,8 @@
 				"title":"Transform case to headerCase (Header-Case)"
 			 },
 			 {
-				"command":"extension.changeCase.paramCase",
-				"title":"Transform case to paramCase (param-case)"
+				"command":"extension.changeCase.kebabCase",
+				"title":"Transform case to paramCase (kebab-case)"
 			 },
 			 {
 				"command":"extension.changeCase.pascalCase",
@@ -155,10 +155,10 @@
 					"default": true,
 					"markdownDescription": "Check to keep `Header-Case` formatting in loop"
 				},
-				"toggleCase.case.paramCase": {
+				"toggleCase.case.kebabCase": {
 					"type": "boolean",
 					"default": true,
-					"markdownDescription": "Check to keep `param-case` formatting in loop"
+					"markdownDescription": "Check to keep `kebab-case` formatting in loop"
 				},
 				"toggleCase.case.pascalCase": {
 					"type": "boolean",

@@ -39,7 +39,7 @@ You can toggle through multiple cases, you can find the complete list below:
   - CONSTANT_CASE
   - dot.case
   - Header-Case
-  - param-case
+  - kebab-case
   - PascalCase
   - path/case
   - Sentence case
@@ -52,6 +52,7 @@ This extenion is using some functions of [change-case](https://github.com/blakee
 The extension supports the following setting. Navigate to Preferences > Setting > Toggle Case
  - You can enable/disable any case from being the part of the loop.
  - You can turn notification on/off showing the case text is transformed to.
+ - Navigate to Preferences > Keyboard Shortcuts to change default keybinding of Cmd + M / Ctrl + M to your liking.
 
 # Installation
 Launch VS Code Quick Open (Ctrl/Cmd+P), paste the following command, and press enter.

@@ -18,7 +18,7 @@ export const toCapitalCase = changeCase.capitalCase;
 export const toConstantCase = changeCase.constantCase;
 export const toDotCase = changeCase.dotCase;
 export const toHeaderCase = changeCase.headerCase;
-export const toParamCase = changeCase.paramCase;
+export const toKebabCase = changeCase.paramCase;
 export const toPascalCase = changeCase.pascalCase;
 export const toPathCase = changeCase.pathCase;
 export const toSentenceCase = changeCase.sentenceCase;
@@ -76,10 +76,10 @@ export const CONFIG: {
 	  fn: toHeaderCase
 	},
 	PARAMCASE: {
-	  caseName: 'PARAMCASE',
-	  configParam: 'paramCase',
-	  representation: 'param-case',
-	  fn: toParamCase
+	  caseName: 'KEBABCASE',
+	  configParam: 'kebabCase',
+	  representation: 'kebab-case',
+	  fn: toKebabCase
 	},
 	PASCALCASE: {
 	  caseName: 'PASCALCASE',
