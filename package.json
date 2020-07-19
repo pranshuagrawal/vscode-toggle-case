@@ -179,6 +179,11 @@
 					"type": "boolean",
 					"default": true,
 					"markdownDescription": "Check to keep `snake_case` formatting in loop"
+				},
+				"toggleCase.notification.notifyOnChange": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Check to receive notification when changing case"
 				}
 			}
 		}
