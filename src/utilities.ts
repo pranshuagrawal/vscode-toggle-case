@@ -106,16 +106,3 @@ export const CONFIG: {
 	  fn: toSnakeCase
 	}
   };
-
-  const getPackageCommands = () => {
-	  let obj: any = [];
-	  Object.values(CONFIG).map(el => {
-		obj.push({
-			"command": "extension.changeCase."+el.configParam,
-			"title": `Change case to ${el.configParam} (${el.representation})`
-		});
-	  });
-	  console.log(JSON.stringify(obj));
-  }
-
-  getPackageCommands();

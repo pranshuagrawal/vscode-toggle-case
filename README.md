@@ -47,6 +47,12 @@ You can toggle through multiple cases, you can find the complete list below:
 
 This extenion is using some functions of [change-case](https://github.com/blakeembrey/change-case).
 
+# Settings
+
+The extension supports the following setting. Navigate to Preferences > Setting > Toggle Case
+ - You can enable/disable any case from being the part of the loop.
+ - You can turn notification on/off showing the case text is transformed to.
+
 # Installation
 Launch VS Code Quick Open (Ctrl/Cmd+P), paste the following command, and press enter.
 ```sh

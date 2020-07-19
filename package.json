@@ -10,7 +10,7 @@
 	"description": "Toggle through various cases on a key press",
 	"license": "MIT",
 	"icon": "images/logo.png",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
@@ -48,51 +48,51 @@
 			},
 			{
 				"command":"extension.changeCase.upperCase",
-				"title":"Change case to upperCase (UPPERCASE)"
+				"title":"Transform case to upperCase (UPPERCASE)"
 			 },
 			 {
 				"command":"extension.changeCase.lowerCase",
-				"title":"Change case to lowerCase (lowercase)"
+				"title":"Transform case to lowerCase (lowercase)"
 			 },
 			 {
 				"command":"extension.changeCase.titleCase",
-				"title":"Change case to titleCase (Title Case)"
+				"title":"Transform case to titleCase (Title Case)"
 			 },
 			 {
 				"command":"extension.changeCase.camelCase",
-				"title":"Change case to camelCase (camelCase)"
+				"title":"Transform case to camelCase (camelCase)"
 			 },
 			 {
 				"command":"extension.changeCase.constantCase",
-				"title":"Change case to constantCase (CONSTANT_CASE)"
+				"title":"Transform case to constantCase (CONSTANT_CASE)"
 			 },
 			 {
 				"command":"extension.changeCase.dotCase",
-				"title":"Change case to dotCase (dot.case)"
+				"title":"Transform case to dotCase (dot.case)"
 			 },
 			 {
 				"command":"extension.changeCase.headerCase",
-				"title":"Change case to headerCase (Header-Case)"
+				"title":"Transform case to headerCase (Header-Case)"
 			 },
 			 {
 				"command":"extension.changeCase.paramCase",
-				"title":"Change case to paramCase (param-case)"
+				"title":"Transform case to paramCase (param-case)"
 			 },
 			 {
 				"command":"extension.changeCase.pascalCase",
-				"title":"Change case to pascalCase (PascalCase)"
+				"title":"Transform case to pascalCase (PascalCase)"
 			 },
 			 {
 				"command":"extension.changeCase.pathCase",
-				"title":"Change case to pathCase (path/case)"
+				"title":"Transform case to pathCase (path/case)"
 			 },
 			 {
 				"command":"extension.changeCase.sentenceCase",
-				"title":"Change case to sentenceCase (Sentence case)"
+				"title":"Transform case to sentenceCase (Sentence case)"
 			 },
 			 {
 				"command":"extension.changeCase.snakeCase",
-				"title":"Change case to snakeCase (snake_case)"
+				"title":"Transform case to snakeCase (snake_case)"
 			 }
 		],
 		"keybindings": [
