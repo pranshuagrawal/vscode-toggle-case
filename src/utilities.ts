@@ -75,7 +75,7 @@ export const CONFIG: {
 	  representation: 'Header-Case',
 	  fn: toHeaderCase
 	},
-	PARAMCASE: {
+	KEBABCASE: {
 	  caseName: 'KEBABCASE',
 	  configParam: 'kebabCase',
 	  representation: 'kebab-case',
