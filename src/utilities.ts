@@ -1,4 +1,5 @@
 import * as changeCase from "change-case";
+import { titleCase } from "title-case";
 import { IConfig } from './models';
 
 export const getNextCase = (currentCase: string, allowedCase: any) => {
@@ -13,7 +14,7 @@ export const getNextCase = (currentCase: string, allowedCase: any) => {
 };
 
 export const toCamelCase = changeCase.camelCase;
-export const toTitleCase = changeCase.capitalCaseTransform;
+export const toTitleCase = titleCase;
 export const toCapitalCase = changeCase.capitalCase;
 export const toConstantCase = changeCase.constantCase;
 export const toDotCase = changeCase.dotCase;
